@@ -1,0 +1,6 @@
+{
+	"prettier_options": {
+			"printWidth": 170,
+			"singleQuote": true,
+	}
+}

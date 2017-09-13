@@ -1,0 +1,1346 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"container",
+				"containerHeight"
+			],
+			[
+				"offse",
+				"offsetHeight"
+			],
+			[
+				"bgsc",
+				"bgsz-cv\tbackground-size: cover;"
+			],
+			[
+				"vis",
+				"visibility"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"ls",
+				"list-style-type"
+			],
+			[
+				"gutter",
+				"gutterSmall"
+			],
+			[
+				"comm",
+				"comm-block\tComment - Block style comment"
+			],
+			[
+				"quer",
+				"querySelector"
+			],
+			[
+				"que",
+				"querySelector"
+			],
+			[
+				"next",
+				"nextSibling"
+			],
+			[
+				"secondary-c",
+				"secondary-color"
+			],
+			[
+				"section-",
+				"section-grey"
+			],
+			[
+				"window",
+				"windowWidth"
+			],
+			[
+				"e",
+				"e"
+			],
+			[
+				"header",
+				"headerHeight"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/joao/Gizmo/home/joao/www/ob/berwick/html/assets/berwick-partners/tpl/News.html",
+			"settings":
+			{
+				"buffer_size": 7398,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/tpl/News.html",
+			"settings":
+			{
+				"buffer_size": 7398,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/structure/_footer.scss",
+			"settings":
+			{
+				"buffer_size": 2143,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/structure/_navigation.scss",
+			"settings":
+			{
+				"buffer_size": 7844,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/components/_news.scss",
+			"settings":
+			{
+				"buffer_size": 4100,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/_variables.scss",
+			"settings":
+			{
+				"buffer_size": 1373,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"jslint",
+				"JSLint"
+			],
+			[
+				"jsl",
+				"Build With: JSLint"
+			],
+			[
+				"jsli",
+				"JSLint"
+			],
+			[
+				"lint",
+				"JSLint"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"discover",
+				"Package Control: Discover Packages"
+			],
+			[
+				"snippe",
+				"Snippet: consolelog"
+			],
+			[
+				"snippet",
+				"Snippet: if"
+			],
+			[
+				"Package Control: dis",
+				"Package Control: Discover Packages"
+			],
+			[
+				"install paca",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/tpl",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/html",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/html/assets",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/html/assets/berwick-partners",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/html/assets/berwick-partners/tpl"
+	],
+	"file_history":
+	[
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/structure/_footer.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/js/core.js",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/ts/setup.ts",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/components/_search.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/_variables.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/structure/_navigation.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/structure/_header.scss",
+		"/Users/joao/Gizmo/home/joao/www/og/berwick",
+		"/Users/joao/Gizmo/home/joao/www/berwick/www",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/tpl/News.html",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/css/partials/components/_overides.scss",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/ts/setup.ts",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/css/partials/components/_button.scss",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/css/partials/components/_box.scss",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/css/partials/structure/_page.scss",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/css/partials/components/_pages.scss",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/js/core.js",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/css/partials/components/_search.scss",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/ba/ts/setup.ts",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/components/_featuredCards.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/components/_slider.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/tpl/Box.html",
+		"/Users/joao/Gizmo/home/joao/www/gym/www/html/typo3conf/ext/gym_branches/Model/Branches/Observer/Branches.php",
+		"/Users/joao/Gizmo/home/joao/www/gym/www/html/typo3conf/ext/gym_branches/tca.php",
+		"/Users/joao/Gizmo/home/joao/www/gym/www/html/typo3conf/ext/gym_branches/l10n.xml",
+		"/Users/joao/Gizmo/home/joao/www/gym/www/html/typo3conf/ext/gym_branches/ext_tables.sql",
+		"/Users/joao/Gizmo/home/joao/www/gym/www/html/typo3conf/ext/gym_branches/Model/Branches/Typoscript/Setup.ts",
+		"/Users/joao/Gizmo/home/joao/www/gym/www/html/typo3conf/ext/gym_branches/Model/Branches/Template/Branches.html",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/components/_box.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/components/_news.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/structure/_page.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/base/_typography.scss",
+		"/Users/joao/Gizmo/home/joao/www/gym/www/build/gym/css/partials/_variables.scss",
+		"/Users/joao/Gizmo/home/joao/www/gym/www/build/gym/js/core.js",
+		"/Users/joao/Gizmo/home/joao/www/gym/www/build/gym/css/partials/components/_gyms.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/components/_filters.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/tpl/News.html",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/components/_breadcrumb.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/_components.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/components/_button.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/base/_forms.scss",
+		"/Users/joao/Downloads/twitter/Twitter_Logo_Grey_On_Transparent.png",
+		"/Users/joao/Downloads/twitter/Twitter_Logo_White_On_Transparent.png",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/html/typo3/ext/ll_news/Model/News/Observer/News.php",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/base/_lists.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/_utils.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/screen.rte.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/base/_document.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/html/typo3/ext/ll_fe/Library/MobileMegaNavigation/ts/setup.txt",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/tpl/cta.html",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/_base.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/html/typo3/ext/ll_fe/Default/Build/sass/ll/lib/_sprite.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/html/t3lib/formprotection/class.t3lib_formprotection_abstract.php",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/.gitignore",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/sprite/icons_linkedinNeutralLightest.svg",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/gulpfile.js",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/base/_fonts.scss",
+		"/Users/joao/Library/Application Support/Sublime Text 3/Packages/User/mq.sublime-snippet",
+		"/Users/joao/Library/Application Support/Sublime Text 3/Packages/User/comment.sublime-snippet",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/src/_sprite.scss",
+		"/Users/joao/Gizmo/home/joao/www/tm/www/html/typo3conf/ext/ll_tm/Template/PBSurveyClientEmail.html",
+		"/Users/joao/Desktop/untitled.html",
+		"/Users/joao/Gizmo/home/joao/www/tm/www/html/typo3conf/ext/ll_tm/Plugin/Find/Plugin.php",
+		"/Users/joao/Gizmo/home/joao/www/tm/www/html/typo3conf/ext/irfaq/pi1/class.tx_irfaq_pi1.php",
+		"/Users/joao/Web/webpack/webpack.config.js",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/js/lib/_classList.polyfill.min.js",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/build/basesite/css/partials/components/_projects.scss",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/build/basesite/css/screen.scss",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/build/basesite/css/partials/components/_videos.scss",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/build/basesite/css/partials/structure/_navigation.scss",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/build/basesite/css/partials/components/_news.scss",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/build/basesite/css/partials/components/_filters.scss",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/build/basesite/css/partials/base/_typography.scss",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/build/basesite/css/partials/base/_tables.scss",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/build/basesite/css/partials/utils/_placeholders.scss",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/build/basesite/css/partials/utils/_functions.scss",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/build/basesite/css/partials/utils/_keyframes.scss",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/build/basesite/css/partials/utils/_mixins.scss",
+		"/Users/joao/Web/webpack/.babelrc",
+		"/Users/joao/Web/webpack/index.html",
+		"/Users/joao/Web/webpack/README.md",
+		"/Users/joao/Web/webpack/dist/css/app.css",
+		"/Users/joao/Gizmo/home/joao/www/tm/www/build/uk-pi/tpl/Knowledge.html",
+		"/Users/joao/Gizmo/home/joao/www/tm/www/build/uk-pi/css/screen.layout.scss",
+		"/Users/joao/Gizmo/home/joao/www/tm/www/build/uk-pi/css/screen.scss",
+		"/Users/joao/Web/webpack/build/conf.js",
+		"/Users/joao/Web/webpack/src/js/app.js",
+		"/Users/joao/Web/webpack/build/webpack.dev.js",
+		"/Users/joao/Web/webpack/build/webpack.base.js",
+		"/Users/joao/Web/webpack/build/webpack.prod.js",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/gulp-css-task.js",
+		"/Users/joao/Gizmo/home/joao/www/tm/www/build/itic/css/screen.layout.scss",
+		"/Users/joao/Gizmo/home/joao/www/tm/www/html/assets/uk-pi/css/screen.css",
+		"/Users/joao/Gizmo/home/joao/www/bp/www/html/typo3conf/ext/bp/pi1/class.tx_bp_pi1.php",
+		"/Users/joao/Gizmo/home/joao/www/bp/www/html/typo3conf/ext/bp/Template/bp2.html",
+		"/Users/joao/Web/webpack/src/js/views/components/people-listing.js",
+		"/Users/joao/Web/webpack/gulpfile.js",
+		"/Users/joao/Web/webpack/src/js/routes.js",
+		"/Users/joao/Web/webpack/src/js/views/components/people-detail.js",
+		"/Users/joao/Gizmo/home/joao/www/ihp/hdc/build/hdc/css/partials/components/_pagination.scss",
+		"/Users/joao/Gizmo/home/joao/www/ihp/hdc/build/hdc/css/partials/structure/_page.scss",
+		"/Users/joao/Gizmo/home/joao/www/ihp/hdc/build/hdc/ts/setup.ts",
+		"/Users/joao/Gizmo/home/joao/www/ihp/hdc/build/hdc/css/partials/components/_news.scss",
+		"/Users/joao/Gizmo/home/joao/www/ihp/hdc/build/hdc/css/partials/_variables.scss",
+		"/Users/joao/Gizmo/home/joao/www/ihp/hdc/build/hdc/js/_formLabels.js",
+		"/Users/joao/Gizmo/home/joao/www/ihp/hdc/build/hdc/css/partials/components/_filters.scss",
+		"/Users/joao/Gizmo/home/joao/www/ihp/hdc/build/hdc/tpl/Categories.html",
+		"/Users/joao/Gizmo/home/joao/www/ihp/hdc/html/typo3/ext/ll_catalog_taxonomy/Filter/Categories/Template/Categories.html",
+		"/Users/joao/Gizmo/home/joao/www/ihp/hdc/build/hdc/js/core.js",
+		"/Users/joao/Gizmo/home/joao/www/tm/www/build/blp-new/ts/setup.ts",
+		"/Users/joao/Gizmo/home/joao/www/tm/www/build/blp-new/css/screen.layout.scss",
+		"/Users/joao/Gizmo/home/joao/www/tm/www/build/blp/ts/setup.ts",
+		"/Users/joao/Gizmo/home/joao/www/tm/www/build/tm/ts/setup.ts",
+		"/Users/joao/Gizmo/home/joao/www/staff/joao/sprite.svg",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/_components.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/components/_video.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/components/_indentingBox.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/base/_typography.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/structure/_page.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/components/_stats-tabs.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/components/_map.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/structure/_navigation.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/structure/_footer.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/components/_box.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/components/_images.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/components/_overrides.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/structure/_header.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/js/map.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/joao/Gizmo/home/joao/www/charcol/www/html/typo3conf",
+			"",
+			"/Users/joao/Gizmo/home/joao/www/gym/www/html/typo3conf/ext/gym_branches",
+			"",
+			"/Users/joao/Gizmo/home/joao/www/tm/www/build",
+			"/Users/joao/Gizmo/home/liquidlight/www/afdb/avo/build/avo/css/partials",
+			"<open folders>",
+			"",
+			"<open folders>",
+			"<open files>",
+			"",
+			"/Users/joao/Gizmo/home/joao/www/lse/www/html/typo3conf/ext/ll_hubspotforms",
+			"",
+			"<current file>",
+			"",
+			"/Users/joao/Gizmo/home/liquidlight/www/ll/basesite/build/basesite/css",
+			"/Users/joao/Gizmo/home/liquidlight/www/charcol/www/build/charcol/css",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"post-details",
+			"</a></li>",
+			"<li>",
+			"Liquid%20Light",
+			"######",
+			"single --",
+			"n -->",
+			"before",
+			"subFooter",
+			"search-is-visible",
+			"1s ",
+			"75",
+			".7",
+			"#search",
+			"search",
+			"input",
+			";\n",
+			"input",
+			"search",
+			"header",
+			"none",
+			"container",
+			"}\n",
+			"ask",
+			"askexport",
+			".relatedArticlesContainer ",
+			"div",
+			"relatedArtices",
+			"newsListGrid",
+			".grid",
+			"class=\"button\"",
+			"<h3>",
+			"single -->",
+			"relatedArticles",
+			"box.breakout",
+			"breakout",
+			"document",
+			"search",
+			"Unfortunately your search",
+			"Unfortunately your search did not return any results.",
+			"bread",
+			"banner",
+			"csc-firstHeader",
+			"streetview_embed",
+			"streetview",
+			"freepar",
+			"freeparking",
+			"data-src",
+			"url",
+			"parkinginformation",
+			"div",
+			"resize",
+			"onresize",
+			"streetview",
+			"1srszfnIIK2KwAAAQ7Loh12Q",
+			"rszfnIIK2KwAA",
+			"0!7i13312!8i",
+			"document.querySelector('.jsStreetViewContainer')",
+			"width: calc(100% + 2rem);",
+			"isDesktop",
+			"StreetView",
+			"streetView",
+			"log",
+			"iframe",
+			"csc-firstHeader",
+			"link",
+			"homepage",
+			"255,255,255",
+			"white",
+			"category",
+			"filters",
+			"users",
+			"transition",
+			"primaryNavigation",
+			"a.active",
+			"tablet",
+			"results",
+			"32",
+			"twitter",
+			"media",
+			"6",
+			"copyright",
+			"var(--color2)",
+			" layout(gutter)",
+			"150",
+			"200",
+			"N: summary",
+			": summary",
+			"- ",
+			"gutterSmall",
+			"results",
+			"resetList",
+			"search",
+			"radius",
+			"focus",
+			".csc-textpic-text",
+			".csc-textpic-image",
+			"chevronSecondary",
+			"Primary",
+			"headerNavigationWrapper",
+			"social",
+			".messages",
+			"Lrg",
+			"social",
+			"footer",
+			"footerNavigation",
+			"subNavFooter",
+			".footer",
+			"footer",
+			".footer",
+			"copyright",
+			"footer",
+			"linkedin",
+			"Lightest",
+			"Primary",
+			"Secondary",
+			"footerNavigation",
+			"footer",
+			"search",
+			"headerNavigation",
+			"navigationWrapper",
+			"primaryNavigation",
+			".5rem",
+			"primaryNavigation",
+			"container",
+			"banner",
+			"primary",
+			".primaryNavigation"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"r: theme(neutralLightest)",
+			"theme(neutralLightest)",
+			"single",
+			"-",
+			"."
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "/Users/joao/Gizmo/home/joao/www/ob/berwick"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/joao/Gizmo/home/joao/www/ob/berwick/html/assets/berwick-partners/tpl/News.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7398,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								7046
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Dracula.tmTheme",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3285.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/tpl/News.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7398,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5387,
+								5387
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Dracula.tmTheme",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3351.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/structure/_footer.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2143,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1709,
+								1709
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Dracula.tmTheme",
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1426.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/structure/_navigation.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7844,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2744,
+								2744
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Dracula.tmTheme",
+							"history_list_is_closing": true,
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2570.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/components/_news.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4100,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3540,
+								3540
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Dracula.tmTheme",
+							"history_list_is_closing": true,
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 26.0,
+						"translation.y": 3412.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/_variables.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1373,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1255,
+								1255
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Dracula.tmTheme",
+							"history_list_is_closing": true,
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 661.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 355.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 94.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"_footer",
+				"build/berwick-partners/css/partials/structure/_footer.scss"
+			],
+			[
+				"_news",
+				"build/berwick-partners/css/partials/components/_news.scss"
+			],
+			[
+				"news",
+				"html/assets/berwick-partners/tpl/News.html"
+			],
+			[
+				"_vari",
+				"build/berwick-partners/css/partials/_variables.scss"
+			],
+			[
+				"navigation",
+				"build/berwick-partners/css/partials/structure/_navigation.scss"
+			],
+			[
+				"setup.ts",
+				"build/berwick-partners/ts/setup.ts"
+			],
+			[
+				"_variables",
+				"build/berwick-partners/css/partials/_variables.scss"
+			],
+			[
+				"_header",
+				"build/berwick-partners/css/partials/structure/_header.scss"
+			],
+			[
+				"_navigation",
+				"build/berwick-partners/css/partials/structure/_navigation.scss"
+			],
+			[
+				"_search",
+				"build/berwick-partners/css/partials/components/_search.scss"
+			],
+			[
+				"core.js",
+				"build/berwick-partners/js/core.js"
+			],
+			[
+				"_over",
+				"build/charcol/css/partials/components/_overides.scss"
+			],
+			[
+				"_buttons",
+				"build/charcol/css/partials/components/_button.scss"
+			],
+			[
+				"news.html",
+				"build/charcol/tpl/News.html"
+			],
+			[
+				"_overide",
+				"build/charcol/css/partials/components/_overides.scss"
+			],
+			[
+				"_page",
+				"build/charcol/css/partials/structure/_page.scss"
+			],
+			[
+				"_pages",
+				"build/charcol/css/partials/components/_pages.scss"
+			],
+			[
+				"_box",
+				"build/charcol/css/partials/components/_box.scss"
+			],
+			[
+				"_searc",
+				"build/charcol/css/partials/components/_search.scss"
+			],
+			[
+				"_slider",
+				"build/berwick-partners/css/partials/components/_slider.scss"
+			],
+			[
+				"_featuredcard",
+				"build/berwick-partners/css/partials/components/_featuredCards.scss"
+			],
+			[
+				"_utils",
+				"build/berwick-partners/css/partials/_utils.scss"
+			],
+			[
+				"box.html",
+				"build/berwick-partners/tpl/Box.html"
+			],
+			[
+				"branches.html",
+				"html/typo3conf/ext/gym_branches/Model/Branches/Template/Branches.html"
+			],
+			[
+				"_typo",
+				"build/berwick-partners/css/partials/base/_typography.scss"
+			],
+			[
+				"_featured",
+				"build/berwick-partners/css/partials/components/_featuredCards.scss"
+			],
+			[
+				"_variables.s",
+				"build/berwick-partners/css/partials/_variables.scss"
+			],
+			[
+				"_box.scss",
+				"build/berwick-partners/css/partials/components/_box.scss"
+			],
+			[
+				"_varai",
+				"build/gym/css/partials/_variables.scss"
+			],
+			[
+				"_components",
+				"build/berwick-partners/css/partials/_components.scss"
+			],
+			[
+				"_button",
+				"build/berwick-partners/css/partials/components/_button.scss"
+			],
+			[
+				"_box.scs",
+				"build/berwick-partners/css/partials/components/_box.scss"
+			],
+			[
+				"_naviga",
+				"build/berwick-partners/css/partials/structure/_navigation.scss"
+			],
+			[
+				"core",
+				"build/berwick-partners/js/core.js"
+			],
+			[
+				"_filters",
+				"build/berwick-partners/css/partials/components/_filters.scss"
+			],
+			[
+				"_forms",
+				"build/berwick-partners/css/partials/base/_forms.scss"
+			],
+			[
+				"_typography",
+				"build/berwick-partners/css/partials/base/_typography.scss"
+			],
+			[
+				"_navigation.scss",
+				"build/berwick-partners/css/partials/structure/_navigation.scss"
+			],
+			[
+				"_variables.scss",
+				"build/berwick-partners/css/partials/_variables.scss"
+			],
+			[
+				"setup.",
+				"build/ica/ts/setup.ts"
+			],
+			[
+				"screen.rte",
+				"build/berwick-partners/css/screen.rte.scss"
+			],
+			[
+				"_news.scss",
+				"build/berwick-partners/css/partials/components/_news.scss"
+			],
+			[
+				"news.php",
+				"html/typo3/ext/ll_news/Model/News/Observer/News.php"
+			],
+			[
+				"_pagination",
+				"build/berwick-partners/css/partials/components/_pagination.scss"
+			],
+			[
+				"pagination",
+				"build/berwick-partners/css/partials/components/_pagination.scss"
+			],
+			[
+				"_lists",
+				"build/berwick-partners/css/partials/base/_lists.scss"
+			],
+			[
+				"navigatoi",
+				"build/berwick-partners/css/partials/structure/_navigation.scss"
+			],
+			[
+				"typogra",
+				"build/berwick-partners/css/partials/base/_typography.scss"
+			],
+			[
+				"_docum",
+				"build/berwick-partners/css/partials/base/_document.scss"
+			],
+			[
+				"_butt",
+				"build/berwick-partners/css/partials/components/_button.scss"
+			],
+			[
+				"_typog",
+				"build/berwick-partners/css/partials/base/_typography.scss"
+			],
+			[
+				"_documen",
+				"build/berwick-partners/css/partials/base/_document.scss"
+			],
+			[
+				"_base",
+				"build/berwick-partners/css/partials/_base.scss"
+			],
+			[
+				"_page.scss",
+				"build/berwick-partners/css/partials/structure/_page.scss"
+			],
+			[
+				"_footter",
+				"html/t3lib/formprotection/class.t3lib_formprotection_abstract.php"
+			],
+			[
+				".og",
+				".gitignore"
+			],
+			[
+				"_variab",
+				"build/berwick-partners/css/partials/_variables.scss"
+			],
+			[
+				"header",
+				"build/berwick-partners/css/partials/structure/_header.scss"
+			],
+			[
+				"findplugin.php",
+				"html/typo3conf/ext/ll_tm/Plugin/Find/Plugin.php"
+			],
+			[
+				"html/typo3conf/ext/irfaq/pi1/class.tx_irfaq_pi1.php",
+				"html/typo3conf/ext/irfaq/pi1/class.tx_irfaq_pi1.php"
+			],
+			[
+				"pbsurveyclientemail.ht",
+				"html/typo3conf/ext/ll_tm/Template/PBSurveyClientEmail.html"
+			],
+			[
+				"map.js",
+				"build/avo/js/map.js"
+			],
+			[
+				"_stat",
+				"build/avo/css/partials/components/_stats-tabs.scss"
+			],
+			[
+				"_map.ss",
+				"build/avo/css/partials/components/_map.scss"
+			],
+			[
+				"index.ht",
+				"index.html"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"globalset",
+				"build/global/ts/setup.ts"
+			],
+			[
+				"ukpscreen.scss",
+				"build/uk-pi/css/screen.scss"
+			],
+			[
+				"ukscreen.css",
+				"html/assets/uk-pi/css/screen.css"
+			],
+			[
+				"bp.html",
+				"html/typo3conf/ext/bp/Template/bp.html"
+			],
+			[
+				"gulp",
+				"gulpfile.js"
+			],
+			[
+				"app.js",
+				"src/js/app.js"
+			],
+			[
+				"categories.html",
+				"html/typo3/ext/ll_catalog_taxonomy/Filter/Categories/Template/Categories.html"
+			],
+			[
+				"build/tm/ts/setup.ts",
+				"build/tm/ts/setup.ts"
+			],
+			[
+				"build/blp/ts/setup.ts",
+				"build/blp/ts/setup.ts"
+			],
+			[
+				"_form",
+				"build/big/css/partials/base/_forms.scss"
+			],
+			[
+				"eventform.",
+				"html/typo3conf/ext/big/Plugin/EventForm/Template/EventForm.html"
+			],
+			[
+				"_navig",
+				"build/avo/css/partials/structure/_navigation.scss"
+			],
+			[
+				"_stats",
+				"build/avo/css/partials/components/_stats-tabs.scss"
+			],
+			[
+				"_typogr",
+				"build/avo/css/partials/base/_typography.scss"
+			],
+			[
+				"_map",
+				"build/avo/css/partials/components/_map.scss"
+			],
+			[
+				"_varia",
+				"build/avo/css/partials/_variables.scss"
+			],
+			[
+				"_map.scss",
+				"build/avo/css/partials/components/_map.scss"
+			],
+			[
+				"_page.scs",
+				"build/avo/css/partials/structure/_page.scss"
+			],
+			[
+				"_news.",
+				"build/avo/css/partials/components/_news.scss"
+			],
+			[
+				"_document",
+				"build/avo/css/partials/base/_document.scss"
+			],
+			[
+				"/typo3/ext/ll_fe/default/build/gulp/gulpfile-v2.js",
+				"html/typo3/ext/ll_fe/Default/Build/gulp/gulpfile-v2.js"
+			],
+			[
+				"html/typo3conf/ext/ll_tm/hook/class.tx_lltm_pbsurvey_hook.php",
+				"html/typo3conf/ext/ll_tm/Hook/class.tx_lltm_pbsurvey_hook.php"
+			],
+			[
+				"pbsurvey_hook.",
+				"html/typo3conf/ext/ll_tm/Hook/class.tx_lltm_pbsurvey_hook.php"
+			],
+			[
+				"knowledge.html",
+				"html/typo3conf/ext/ll_tm_knowledgebase/Model/Knowledge/Template/Knowledge.html"
+			],
+			[
+				"eventform",
+				"html/typo3conf/ext/big/Plugin/EventForm/Template/EventForm.html"
+			],
+			[
+				"eventform.html",
+				"html/typo3conf/ext/big/Plugin/EventForm/Template/EventForm.html"
+			],
+			[
+				"_keyfa",
+				"build/avo/css/partials/utils/_keyframes.scss"
+			],
+			[
+				"_table-gra",
+				"build/avo/css/partials/components/_table-graph.scss"
+			],
+			[
+				"statistics",
+				"html/typo3conf/ext/avo/Plugin/Statistics/Template/Statistics.html"
+			],
+			[
+				"_map.scs",
+				"build/avo/css/partials/components/_map.scss"
+			],
+			[
+				"_nav",
+				"build/avo/css/partials/structure/_navigation.scss"
+			],
+			[
+				"statist",
+				"html/typo3conf/ext/avo/Plugin/Statistics/Template/Statistics.html"
+			],
+			[
+				"statis",
+				"html/typo3conf/ext/avo/Plugin/Statistics/Template/Statistics.html"
+			],
+			[
+				"people-",
+				"src/js/views/components/people-detail.js"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"setup",
+				"build/afmi/ts/setup.ts"
+			],
+			[
+				"test.js",
+				"assets/js/test.js"
+			],
+			[
+				"test",
+				"assets/js/test.js"
+			],
+			[
+				"_naviag",
+				"build/avo/css/partials/structure/_navigation.scss"
+			],
+			[
+				"core.",
+				"build/maples/js/core.js"
+			],
+			[
+				"plugin.php",
+				"html/typo3conf/ext/avo/Plugin/Statistics/Plugin.php"
+			],
+			[
+				"import.php",
+				"html/typo3conf/ext/avo/Task/Import.php"
+			],
+			[
+				"map",
+				"build/avo/js/map.js"
+			],
+			[
+				"_keyframes",
+				"build/avo/css/partials/utils/_keyframes.scss"
+			],
+			[
+				"print.scss",
+				"build/avo/css/print.scss"
+			],
+			[
+				"_keyrames",
+				"build/avo/css/partials/utils/_keyframes.scss"
+			],
+			[
+				"_select",
+				"build/avo/css/partials/components/_select.scss"
+			],
+			[
+				"_loader",
+				"build/avo/css/partials/components/_loader.scss"
+			],
+			[
+				"_inden",
+				"build/avo/css/partials/components/_indentingBox.scss"
+			],
+			[
+				"keyframes",
+				"build/avo/css/partials/utils/_keyframes.scss"
+			],
+			[
+				"_table",
+				"build/avo/css/partials/components/_table-graph.scss"
+			],
+			[
+				"statistics.html",
+				"html/typo3conf/ext/avo/Plugin/Statistics/Template/Statistics.html"
+			],
+			[
+				"_sele",
+				"build/avo/css/partials/components/_select.scss"
+			],
+			[
+				"_ma",
+				"build/avo/css/partials/components/_map.scss"
+			],
+			[
+				"statistics.",
+				"html/typo3conf/ext/avo/Plugin/Statistics/Template/Statistics.html"
+			],
+			[
+				"pbsurveyclientemail.html",
+				"html/typo3conf/ext/ll_tm/Template/PBSurveyClientEmail.html"
+			],
+			[
+				"navia",
+				"build/avo/css/partials/structure/_navigation.scss"
+			],
+			[
+				"header.scss",
+				"build/avo/css/partials/structure/_header.scss"
+			],
+			[
+				"_typogra",
+				"build/avo/css/partials/base/_typography.scss"
+			],
+			[
+				"news.",
+				"build/avo/tpl/News.html"
+			],
+			[
+				"sprite",
+				"build/avo/img/sprite.svg"
+			],
+			[
+				"_navigation.",
+				"build/avo/css/partials/structure/_navigation.scss"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"carcol",
+				"~/Library/Application Support/Sublime Text 3/Packages/User/Projects/charcol.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 87.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 422.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 271.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

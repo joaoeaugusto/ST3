@@ -1,0 +1,1342 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"container",
+				"containerHeight"
+			],
+			[
+				"offse",
+				"offsetHeight"
+			],
+			[
+				"bgsc",
+				"bgsz-cv\tbackground-size: cover;"
+			],
+			[
+				"vis",
+				"visibility"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"ls",
+				"list-style-type"
+			],
+			[
+				"gutter",
+				"gutterSmall"
+			],
+			[
+				"comm",
+				"comm-block\tComment - Block style comment"
+			],
+			[
+				"quer",
+				"querySelector"
+			],
+			[
+				"que",
+				"querySelector"
+			],
+			[
+				"next",
+				"nextSibling"
+			],
+			[
+				"secondary-c",
+				"secondary-color"
+			],
+			[
+				"section-",
+				"section-grey"
+			],
+			[
+				"window",
+				"windowWidth"
+			],
+			[
+				"e",
+				"e"
+			],
+			[
+				"header",
+				"headerHeight"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/tpl/News.html",
+			"settings":
+			{
+				"buffer_size": 10002,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "/**\n * Charcol JS\n *\n * @filename core.js\n * @author Oliver Rowlands\n * @author Mike Street\n * @author Pranath Fernando\n * @date 2015-12\n * @copyright Liquid Light Group Ltd.\n * @url https://www.liquidlight.co.uk\n */\n\n//=include ./_parallax.js\n//=include ./_masonify.js\n\n$.megaNavigation({\n\tmobileNavigationTrigger: 'li:not(.call)'\n});\n\n/**\n * Bootstrap\n */\n// Shuffle the array\nfunction Shuffle(o) {\n\tfor(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);\n\treturn o;\n}\nif($('#homepage').length) {\n\tvar backgroundImages = [\n\t\t'/fileadmin/uploads/Banners/Homepage/Rotator/boxes-couple.jpg',\n\t\t'/fileadmin/uploads/Banners/Homepage/Rotator/couple-000088062739.jpg',\n\t\t'/fileadmin/uploads/Banners/Homepage/Rotator/family.jpg',\n\t\t'/fileadmin/uploads/Banners/Homepage/Rotator/happy-couple.jpg',\n\t\t'/fileadmin/uploads/Banners/Homepage/Rotator/ipad-couple.jpg',\n\t\t'/fileadmin/uploads/Banners/Homepage/Rotator/moving-in-couple.jpg',\n\t\t'/fileadmin/uploads/Banners/Homepage/Rotator/middle-age-lady.jpg',\n\t\t'/fileadmin/uploads/Banners/Homepage/Rotator/generation-family.jpg'\n\t];\n\n\tbackgroundImages = Shuffle(backgroundImages);\n\n\t// Get a random value\n\tvar random = Math.floor(Math.random() * backgroundImages.length);\n\n\t// Set the background image\n\t$('#homepage .pageLayout > div > div.header > div > div.box').css({\n\t\tbackgroundImage: 'url(' + backgroundImages[random]  + ')'\n\t});\n}\n\n$(document).ready(function() {\n\n\t$('h1, h2, h3, h4, h5, h6').has('sup').addClass('hasCounter');\n\n\t// Mobile Nav Var\n\tvar mobileNavigation = $('#mobileNavigation');\n\n\t/**\n\t * Lightbox\n\t */\n\t$('.lightbox a').fancybox({\n\t\ttype: 'iframe',\n\t\tpadding: 0,\n\t\thelpers : {\n\t\t\toverlay : {\n\t\t\t\tcss : {\n\t\t\t\t\t'background' : 'rgba(0, 0, 0, 0.6)'\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t});\n\n\t/**\n\t * Desktop Navigation\n\t *\n\t * Includes all the nerdery for showing the desktop navigations\n\t */\n\tif(!mobileNavigation.is(':visible')) {\n\n\t\tvar activeClass = 'selected';\n\t\tvar hasChildren = $('nav > .wrapper').find('> ul > .hasChildren');\n\t\tvar hasChildrenSubnav = hasChildren.find('.subNav:first');\n\t\tvar animationTime = 300;\n\n\t\t// Top level navigation items - when clicked slidedown all thier children\n\t\t// If a different one is clicked, it slides up the open one and slides down\n\t\t// the new one.\n\t\thasChildren.find('> a, > span').on('click', function(e){\n\t\t\te.preventDefault();\n\n\t\t\tvar self = $(this);\n\t\t\tvar target = self.next('.subNav');\n\t\t\tvar closing = false;\n\n\t\t\thasChildren.removeClass(activeClass);\n\n\t\t\tif(target.is(':visible'))\n\t\t\t\tclosing = true;\n\n\t\t\thasChildrenSubnav.slideUp(animationTime).promise().done(function() {\n\t\t\t\tif(!closing) {\n\t\t\t\t\tself.parent().addClass(activeClass);\n\t\t\t\t\ttarget.slideDown(animationTime);\n\t\t\t\t}\n\t\t\t});\n\t\t});\n\n\t\t// Closes the menu if user clicks anywhere else on the screen\n\t\t$(document).on('click', function(event) {\n\t\t\tif (!$(event.target).closest('#primaryNavigation').length) {\n\t\t\t\thasChildren.removeClass(activeClass);\n\t\t\t\thasChildrenSubnav.slideUp(animationTime);\n\t\t\t}\n\t\t});\n\n\t\tvar popupCenter = function(trigger, target, check){\n\n\t\t\ttrigger.click(function(e) {\n\t\t\t\te.preventDefault();\n\t\t\t\ttarget.addClass('isVisible').removeClass('isHidden');\n\t\t\t\t$('body').addClass('hasModalOpen');\n\t\t\t\t$('#overlay input').first().focus();\n\t\t\t});\n\n\t\t\ttarget.click(function(e) {\n\t\t\t\tvar clicked = $(e.target);\n\t\t\t\t// Have to have these in the function as they rely on \"e\"\n\t\t\t\tvar checkIf = (clicked.is('.search') || (clicked.parents().is('.content') && !clicked.is('.cross')));\n\n\t\t\t\tif(check == 'profile') {\n\t\t\t\t\tcheckIf = (((clicked.parents(\"#profile .container #mailform fieldset\").length == 1) || (clicked.is('fieldset'))) && !clicked.is('.cross'));\n\t\t\t\t}\n\n\t\t\t\tif (checkIf) {\n\t\t\t\t\treturn true;\n\t\t\t\t} else {\n\t\t\t\t\t$('body').removeClass('hasModalOpen');\n\t\t\t\t\ttarget.removeClass('isVisible').addClass('isHidden');\n\t\t\t\t\treturn false;\n\t\t\t\t}\n\t\t\t});\n\t\t};\n\n\t\t// Search Overlay\n\t\tif($('#primaryNavigation > nav > div > ul > li:last-child a').length) {\n\t\t\tpopupCenter(\n\t\t\t\t$('#primaryNavigation > nav > div > ul > li:last-child a'),\n\t\t\t\t$('#overlay'),\n\t\t\t\t'search'\n\t\t\t);\n\t\t}\n\n\t\t// Contact form on user profile\n\t\tif($('#profile .container #mailform').length) {\n\n\t\t\tvar profileForm = $('#profile .container #mailform');\n\t\t\tprofileForm.find('fieldset > div:first-child').before('<div class=\"cross\"></div><h2>Get in touch</h2>');\n\n\t\t\tpopupCenter(\n\t\t\t\t$('.users.single .contactFormLink'),\n\t\t\t\tprofileForm,\n\t\t\t\t'profile'\n\t\t\t);\n\t\t}\n\n\t}\n\n\t/**\n\t * Form type modifications\n\t */\n\n\t// Number\n\tif($('fieldset.number').length) {\n\n\t\t// Remove default 0 value\n\t\t$('fieldset.number input').each(function() {\n\t\t\tif($(this).prop('value') == '0') {\n\t\t\t\t$(this).prop('value', '');\n\t\t\t}\n\t\t});\n\n\t\t// Only make it number on mobile\n\t\tif(mobileNavigation.is(':visible')) {\n\t\t\t$('fieldset.number input').prop({\n\t\t\t\t'type': 'number',\n\t\t\t\t'pattern': '\\\\d*'\n\t\t\t});\n\t\t}\n\n\t}\n\n\t// Telephone\n\tif($('fieldset.telephone').length) {\n\t\t$('fieldset.telephone input').prop('type', 'tel');\n\t}\n\n\t// Email\n\tif($('fieldset.email').length) {\n\t\t$('fieldset.email input').prop('type', 'email');\n\t}\n\n\t// Date of birth\n\tif((!mobileNavigation.is(':visible')) && $('fieldset.dob').length) {\n\t\t$('fieldset.dob input').prop('autocomplete', 'off').datepicker({\n\t\t\tdateFormat: 'dd-mm-yy',\n\t\t\tchangeYear: true,\n\t\t\tyearRange : '-120:+1'\n\t\t});\n\t}\n\n\t// Form submission\n\t$('#frmPbSurvey').submit(function() {\n\t\t$('fieldset.number input', this).each(function() {\n\t\t\t$(this).prop('value', $(this).prop('value').replace(/[^0-9\\.]+/g, ''));\n\t\t});\n\t\treturn true;\n\t});\n\n\t/**\n\t * Marketing form date picker\n\t */\n\tif($('#mailformDateofacitivity').size() > 0) {\n\t\t$('#mailformDateofacitivity').datepicker({\n\t\t\tminDate: new Date(),\n\t\t\thideIfNoPrevNext: true,\n\t\t\tgotoCurrent: true,\n\t\t\tdateFormat: 'dd/mm/yy',\n\t\t\tyearRange: \"-50:+50\",\n\t\t\tshowOn: 'both',\n\t\t\tbuttonText: '<span>Select date</span>'\n\t\t});\n\t}\n\n\t/**\n\t * Best Buy Table\n\t */\n\tvar bestBuyTable = $('#homepage div.tx-llcatalog-pi div.mortgages table');\n\tvar bestBuyRows = bestBuyTable.find('tr');\n\tif (bestBuyRows.length > 5) {\n\t\tvar count = 1;\n\t\tbestBuyRows.each(function() {\n\t\t\tif (count > 5)\n\t\t\t\t$(this).addClass('overflow').hide();\n\n\t\t\t++count;\n\t\t});\n\t\tbestBuyTable.find('tbody').append('<tr class=\"extraRow\"><td colspan=\"8\"><a href=\"#\" class=\"bestBuyMore\">Show next 5</a></td></tr>');\n\t}\n\t$('a.bestBuyMore').click(function(e) {\n\t\te.preventDefault();\n\t\tbestBuyTable.find('tr.overflow').each(function() {\n\t\t\t$(this).show();\n\t\t});\n\t\tbestBuyTable.find('tr.extraRow').hide();\n\t});\n\n\t/**\n\t * Ask experts page filter toggle\n\t */\n\tvar expandSitemap = $('body.askExperts div.csc-sitemap');\n\texpandSitemap.find('> ul').children('li').children('a').addClass('section');\n\t$('body.askExperts div.csc-sitemap').on('click', 'a.section', function(e) {\n\t\te.preventDefault();\n\t\t$(this).parent().toggleClass('open').siblings().removeClass('open');\n\t});\n\n\t/**\n\t * Mortgage loan calculator\n\t */\n\tvar telNumber = $('#header div.whitelabel a').clone();\n\ttelNumber.find('span').remove();\n\t$('span.dynamicNumber').html(telNumber.text());\n\tvar mortgageHeight = function() {\n\t\tif($('div.twoColumn.seventyThirty div.column.two #mortgageAmount').length) {\n\n\t\t\tvar height = 0;\n\t\t\tvar calc = $('div.twoColumn.seventyThirty div.column.two #mortgageAmount');\n\n\t\t\tif(calc.find('> form').hasClass('isCalculated'))\n\t\t\t\theight = calc.find('.calcResults').height();\n\t\t\telse\n\t\t\t\theight = calc.find('#calcForm').height();\n\n\t\t\tcalc.css('max-height', height);\n\t\t}\n\t};\n\tmortgageHeight();\n\tvar calc = $('.calcValForm');\n\tcalc.find('#addSecondApplicantAnchor').on('click', function(e) {\n\t\te.preventDefault();\n\t\tcalc.find('#addSecondApplicant').hide();\n\t\tcalc.find('#secondApplicant').show();\n\t\tmortgageHeight();\n\t\treturn false;\n\t});\n\t$('.calculateButton').on('click', function() {\n\t\t$(this).parents('.calcValForm').addClass('isCalculated');\n\t\tmortgageHeight();\n\t});\n\t$('.recalculate').on('click', function() {\n\t\t$(this).parents('.calcValForm').removeClass('isCalculated');\n\t\tmortgageHeight();\n\t});\n\n\t/**\n\t * Parallax Banners\n\t */\n\tvar runParallax = true;\n\n\t// Don't run parallax for IE as it's a bit buggy\n\tvar ua = window.navigator.userAgent;\n\tvar msie = ua.indexOf(\"MSIE \");\n\tif(msie > 0 || !!navigator.userAgent.match(/Trident\\/7\\./))\n\t\trunParallax = false;\n\n\tif (runParallax) {\n\t\tvar banner = $('div.banner');\n\t\tparallaxBackgorund = /^url\\((['\"]?)(.*)\\1\\)$/.exec(banner.css('background-image'));\n\t\tbanner.addClass('parallaxInit').css('background', 'transparent').parallax({\n\t\t\timageSrc: parallaxBackgorund[2],\n\t\t\tspeed: '0.5'\n\t\t});\n\t}\n\t$('.calculateButton').on('click', function(){\n\t\t$(window).trigger('resize').trigger('scroll');\n\t});\n\n\t/**\n\t * Fixed Header\n\t */\n\tvar theHeader = $('#header');\n\tvar navigation = $('#primaryNavigation');\n\tvar navTop = navigation.offset().top;\n\tvar threshold = 20;\n\tvar heightCutoff = 700;\n\n\tvar fixedHeader = function(thisWindow){\n\t\tvar windowScroll = thisWindow.scrollTop();\n\n\t\tif(thisWindow.height() > heightCutoff) {\n\t\t\tif(!mobileNavigation.is(':visible')) {\n\t\t\t\tif(windowScroll > (navTop + navigation.height() + threshold))\n\t\t\t\t\ttheHeader.addClass('isFixed');\n\n\t\t\t\tif(windowScroll < (navTop))\n\t\t\t\t\ttheHeader.removeClass('isFixed');\n\t\t\t}\n\t\t}\n\t};\n\tfixedHeader($(window));\n\t$(window).on('scroll', function(){\n\t\tfixedHeader($(this));\n\t});\n\n\tif($('.box.breakout .reviews li p').length) {\n\t\t// Truncate to 290 if length is more than 320 - stops pointless tuncation\n\t\tvar reviewParagraphs = $('.box.breakout .reviews li p');\n\t\treviewParagraphs.each(function(index, el) {\n\t\t\tif($(this).text().length > 320) {\n\t\t\t\t$(this).truncate({\n\t\t\t\t\tmax_length: 290\n\t\t\t\t});\n\t\t\t}\n\t\t});\n\t}\n\t/**\n\t * Best buys table - key tool tips\n\t */\n\tvar abbr = $('abbr');\n \tvar makeToolTip = function(self) {\n \t\tabbr.next('.tooltip').remove();\n \t\tself.after('<span class=\"tooltip\">' + self.data('title') + '</span>');\n\n \t\tvar left = self.position().left + self.width() + 4;\n \t\tvar top = self.position().top - 4;\n \t\tself.next().css({\n \t\t\t'left': left,\n \t\t\t'top': top\n \t\t});\n \t};\n\n \tabbr.each(function(){\n \t\tvar self = $(this);\n \t\tself.attr('data-title', self.attr('title'));\n \t\tself.removeAttr('title');\n \t});\n\n \tabbr.mouseover(function() {\n \t\tmakeToolTip($(this));\n \t})\n \t.mouseout(function(){\n \t\t$(this).next('.tooltip').remove();\n \t})\n \t.click(function(){\n \t\tvar self = $(this);\n \t\tmakeToolTip(self);\n\n \t\tself.next().delay(1500).fadeOut();\n \t});\n});\n\n$(window).load(function(){\n\t/**\n\t * Masonry\n\t */\n\tif((!$('#mobileNavigation').is(':visible')) && ($('div.newsList.masonry').size() > 0)) {\n\t\tResizeEvents.eventElement.bind('x-text-resize x-window-resize', function() {\n\t\t\t$('div.newsList div.articles').masonify('div.newsList div.articles', 'div.newsItem');\n\t\t});\n\t\tResizeEvents.initialise();\n\t\t$(document).trigger('x-text-resize');\n\t}\n});\n\n/**\n * Survey Toggle Box\n *\n * This allows toggle \"boxes\" to be added to the survey plugin.\n *\n * Usage:\n *\n * - To a \"Presentation - Message\" add the class of `jsToggleTarget-key` (where the `key` is unique)\n * - To any number of following fields, add the class `jsToggleContent-key` (the key is the same as above)\n * - Upon this, the below JS will wrap the content fields in a `altToggle` div and adds the action to the message to toggle\n *\n * NOTE: Unlike the default toggle boxes, all of these can be open at the same time.\n */\n\n// Check we have a survey\nif($('.tx-pbsurvey-pi1').length) {\n\n\t// Look for toggle targets\n\tvar toggleTargets = $('[class *=\"jsToggleTarget-\"]');\n\n\t// Proceed if there are toggleTargets\n\tif(toggleTargets.length) {\n\n\t\t// Foreach toggle target (as the key may be different)\n\t\ttoggleTargets.each(function() {\n\t\t\tvar self = $(this);\n\t\t\tvar toggleClass = false;\n\n\t\t\t// Convert the current classes into an arry and find the toggleTarget class\n\t\t\tvar classes = self.attr(\"class\").split(' ');\n\t\t\tfor (var i = 0; i < classes.length; i++) {\n\t\t\t\tif(classes[i].indexOf('jsToggleTarget') !== -1) {\n\t\t\t\t\ttoggleClass = classes[i];\n\t\t\t\t}\n\t\t\t}\n\n\t\t\t// Only proceed if we have our class (just in case ¯\\_(ツ)_/¯)\n\t\t\tif(toggleClass) {\n\t\t\t\tself.addClass('altToggleTrigger');\n\t\t\t\tvar title = $('<div class=\"title\" />').html(self.html());\n\n\t\t\t\t// Split the toggleClass on the hyphen - to get the key to target the contents\n\t\t\t\ttoggleClass = toggleClass.split('-');\n\t\t\t\tvar toggleContents = $('.jsToggleContent-' + toggleClass[1]);\n\n\t\t\t\t// Wrap all the elements witht he same key contets class with an overarching container\n\t\t\t\ttoggleContents.wrapAll('<div class=\"altToggle\"><div class=\"altToggContents\" /></div>');\n\t\t\t}\n\n\t\t\t// Add a click handler to toggle a class and the slide of the content\n\t\t\tself.on('click', function() {\n\t\t\t\tself.toggleClass('altToggleOpen');\n\t\t\t\tself.next('.altToggle').slideToggle();\n\t\t\t});\n\t\t});\n\t}\n}\n\nif($('.landingPage .tx-pbsurvey-pi1').length) {\n\t$('.survey_item').each(function(index, el) {\n\t\tvar question = $(this).find('.question').hide().text();\n\t\t$(this).find('input').attr('placeholder', question);\n\t});\n}\n\n(function(){\n\t/**\n\t * Read more button\n\t * Reveals full text on AskTheExperts single pages\n\t */\n\tvar container = $('.jsAskTheExperts');\n\n\tif(container.length) {\n\t\tcontainer.addClass('isCollapsed');\n\n\t\tvar button = $('<button class=\"button readMore\">Read more</button>');\n\t\tbutton.insertAfter(container);\n\t\tbutton.on('click', function(){\n\t\t\tcontainer.removeClass('isCollapsed');\n\t\t\t$(this).remove();\n\t\t});\n\t}\n\n})();",
+			"file": "/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/js/core.js",
+			"file_size": 13266,
+			"file_write_time": 131347530090000000,
+			"settings":
+			{
+				"buffer_size": 13259,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/css/partials/components/_news.scss",
+			"settings":
+			{
+				"buffer_size": 6417,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/css/partials/_variables.scss",
+			"settings":
+			{
+				"buffer_size": 1994,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/css/partials/components/_button.scss",
+			"settings":
+			{
+				"buffer_size": 1335,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/css/partials/components/_overides.scss",
+			"settings":
+			{
+				"buffer_size": 11273,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 107.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"jslint",
+				"JSLint"
+			],
+			[
+				"jsl",
+				"Build With: JSLint"
+			],
+			[
+				"jsli",
+				"JSLint"
+			],
+			[
+				"lint",
+				"JSLint"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"discover",
+				"Package Control: Discover Packages"
+			],
+			[
+				"snippe",
+				"Snippet: consolelog"
+			],
+			[
+				"snippet",
+				"Snippet: if"
+			],
+			[
+				"Package Control: dis",
+				"Package Control: Discover Packages"
+			],
+			[
+				"install paca",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/joao/Gizmo/home/joao/www/charcol/www",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/css",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/css/partials",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/css/partials/base",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/js",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/tpl",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/ts",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/html"
+	],
+	"file_history":
+	[
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/tpl/News.html",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/css/partials/components/_overides.scss",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/ts/setup.ts",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/css/partials/components/_button.scss",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/css/partials/components/_box.scss",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/css/partials/structure/_page.scss",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/css/partials/components/_pages.scss",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/js/core.js",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/css/partials/components/_search.scss",
+		"/Users/joao/Gizmo/home/joao/www/charcol/www/build/ba/ts/setup.ts",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/components/_featuredCards.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/components/_slider.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/js/core.js",
+		"/Users/joao/Gizmo/home/joao/www/og/berwick",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/tpl/Box.html",
+		"/Users/joao/Gizmo/home/joao/www/gym/www/html/typo3conf/ext/gym_branches/Model/Branches/Observer/Branches.php",
+		"/Users/joao/Gizmo/home/joao/www/gym/www/html/typo3conf/ext/gym_branches/tca.php",
+		"/Users/joao/Gizmo/home/joao/www/gym/www/html/typo3conf/ext/gym_branches/l10n.xml",
+		"/Users/joao/Gizmo/home/joao/www/gym/www/html/typo3conf/ext/gym_branches/ext_tables.sql",
+		"/Users/joao/Gizmo/home/joao/www/gym/www/html/typo3conf/ext/gym_branches/Model/Branches/Typoscript/Setup.ts",
+		"/Users/joao/Gizmo/home/joao/www/gym/www/html/typo3conf/ext/gym_branches/Model/Branches/Template/Branches.html",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/components/_box.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/_variables.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/components/_news.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/structure/_page.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/structure/_header.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/base/_typography.scss",
+		"/Users/joao/Gizmo/home/joao/www/gym/www/build/gym/css/partials/_variables.scss",
+		"/Users/joao/Gizmo/home/joao/www/gym/www/build/gym/js/core.js",
+		"/Users/joao/Gizmo/home/joao/www/gym/www/build/gym/css/partials/components/_gyms.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/structure/_navigation.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/components/_filters.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/tpl/News.html",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/components/_breadcrumb.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/_components.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/components/_button.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/base/_forms.scss",
+		"/Users/joao/Downloads/twitter/Twitter_Logo_Grey_On_Transparent.png",
+		"/Users/joao/Downloads/twitter/Twitter_Logo_White_On_Transparent.png",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/html/typo3/ext/ll_news/Model/News/Observer/News.php",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/base/_lists.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/_utils.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/ts/setup.ts",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/components/_search.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/screen.rte.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/base/_document.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/html/typo3/ext/ll_fe/Library/MobileMegaNavigation/ts/setup.txt",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/tpl/cta.html",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/_base.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/html/typo3/ext/ll_fe/Default/Build/sass/ll/lib/_sprite.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/structure/_footer.scss",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/html/t3lib/formprotection/class.t3lib_formprotection_abstract.php",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/.gitignore",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/sprite/icons_linkedinNeutralLightest.svg",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/gulpfile.js",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/partials/base/_fonts.scss",
+		"/Users/joao/Library/Application Support/Sublime Text 3/Packages/User/mq.sublime-snippet",
+		"/Users/joao/Library/Application Support/Sublime Text 3/Packages/User/comment.sublime-snippet",
+		"/Users/joao/Gizmo/home/joao/www/ob/berwick/build/berwick-partners/css/src/_sprite.scss",
+		"/Users/joao/Gizmo/home/joao/www/tm/www/html/typo3conf/ext/ll_tm/Template/PBSurveyClientEmail.html",
+		"/Users/joao/Desktop/untitled.html",
+		"/Users/joao/Gizmo/home/joao/www/tm/www/html/typo3conf/ext/ll_tm/Plugin/Find/Plugin.php",
+		"/Users/joao/Gizmo/home/joao/www/tm/www/html/typo3conf/ext/irfaq/pi1/class.tx_irfaq_pi1.php",
+		"/Users/joao/Web/webpack/webpack.config.js",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/js/lib/_classList.polyfill.min.js",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/build/basesite/css/partials/components/_projects.scss",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/build/basesite/css/screen.scss",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/build/basesite/css/partials/components/_videos.scss",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/build/basesite/css/partials/structure/_navigation.scss",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/build/basesite/css/partials/components/_news.scss",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/build/basesite/css/partials/components/_filters.scss",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/build/basesite/css/partials/base/_typography.scss",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/build/basesite/css/partials/base/_tables.scss",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/build/basesite/css/partials/utils/_placeholders.scss",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/build/basesite/css/partials/utils/_functions.scss",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/build/basesite/css/partials/utils/_keyframes.scss",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/build/basesite/css/partials/utils/_mixins.scss",
+		"/Users/joao/Web/webpack/.babelrc",
+		"/Users/joao/Web/webpack/index.html",
+		"/Users/joao/Web/webpack/README.md",
+		"/Users/joao/Web/webpack/dist/css/app.css",
+		"/Users/joao/Gizmo/home/joao/www/tm/www/build/uk-pi/tpl/Knowledge.html",
+		"/Users/joao/Gizmo/home/joao/www/tm/www/build/uk-pi/css/screen.layout.scss",
+		"/Users/joao/Gizmo/home/joao/www/tm/www/build/uk-pi/css/screen.scss",
+		"/Users/joao/Web/webpack/build/conf.js",
+		"/Users/joao/Web/webpack/src/js/app.js",
+		"/Users/joao/Web/webpack/build/webpack.dev.js",
+		"/Users/joao/Web/webpack/build/webpack.base.js",
+		"/Users/joao/Web/webpack/build/webpack.prod.js",
+		"/Users/joao/Gizmo/home/joao/www/ll/basesite/gulp-css-task.js",
+		"/Users/joao/Gizmo/home/joao/www/tm/www/build/itic/css/screen.layout.scss",
+		"/Users/joao/Gizmo/home/joao/www/tm/www/html/assets/uk-pi/css/screen.css",
+		"/Users/joao/Gizmo/home/joao/www/bp/www/html/typo3conf/ext/bp/pi1/class.tx_bp_pi1.php",
+		"/Users/joao/Gizmo/home/joao/www/bp/www/html/typo3conf/ext/bp/Template/bp2.html",
+		"/Users/joao/Web/webpack/src/js/views/components/people-listing.js",
+		"/Users/joao/Web/webpack/gulpfile.js",
+		"/Users/joao/Web/webpack/src/js/routes.js",
+		"/Users/joao/Web/webpack/src/js/views/components/people-detail.js",
+		"/Users/joao/Gizmo/home/joao/www/ihp/hdc/build/hdc/css/partials/components/_pagination.scss",
+		"/Users/joao/Gizmo/home/joao/www/ihp/hdc/build/hdc/css/partials/structure/_page.scss",
+		"/Users/joao/Gizmo/home/joao/www/ihp/hdc/build/hdc/ts/setup.ts",
+		"/Users/joao/Gizmo/home/joao/www/ihp/hdc/build/hdc/css/partials/components/_news.scss",
+		"/Users/joao/Gizmo/home/joao/www/ihp/hdc/build/hdc/css/partials/_variables.scss",
+		"/Users/joao/Gizmo/home/joao/www/ihp/hdc/build/hdc/js/_formLabels.js",
+		"/Users/joao/Gizmo/home/joao/www/ihp/hdc/build/hdc/css/partials/components/_filters.scss",
+		"/Users/joao/Gizmo/home/joao/www/ihp/hdc/build/hdc/tpl/Categories.html",
+		"/Users/joao/Gizmo/home/joao/www/ihp/hdc/html/typo3/ext/ll_catalog_taxonomy/Filter/Categories/Template/Categories.html",
+		"/Users/joao/Gizmo/home/joao/www/ihp/hdc/build/hdc/js/core.js",
+		"/Users/joao/Gizmo/home/joao/www/tm/www/build/blp-new/ts/setup.ts",
+		"/Users/joao/Gizmo/home/joao/www/tm/www/build/blp-new/css/screen.layout.scss",
+		"/Users/joao/Gizmo/home/joao/www/tm/www/build/blp/ts/setup.ts",
+		"/Users/joao/Gizmo/home/joao/www/tm/www/build/tm/ts/setup.ts",
+		"/Users/joao/Gizmo/home/joao/www/staff/joao/sprite.svg",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/_components.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/components/_video.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/components/_indentingBox.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/base/_typography.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/structure/_page.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/components/_stats-tabs.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/components/_map.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/structure/_navigation.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/structure/_footer.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/components/_box.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/components/_images.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/components/_overrides.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/structure/_header.scss",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/js/map.js",
+		"/Users/joao/Gizmo/home/joao/www/afdb/avo/build/avo/css/partials/_variables.scss"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/joao/Gizmo/home/joao/www/charcol/www/html/typo3conf",
+			"",
+			"/Users/joao/Gizmo/home/joao/www/gym/www/html/typo3conf/ext/gym_branches",
+			"",
+			"/Users/joao/Gizmo/home/joao/www/tm/www/build",
+			"/Users/joao/Gizmo/home/liquidlight/www/afdb/avo/build/avo/css/partials",
+			"<open folders>",
+			"",
+			"<open folders>",
+			"<open files>",
+			"",
+			"/Users/joao/Gizmo/home/joao/www/lse/www/html/typo3conf/ext/ll_hubspotforms",
+			"",
+			"<current file>",
+			"",
+			"/Users/joao/Gizmo/home/liquidlight/www/ll/basesite/build/basesite/css",
+			"/Users/joao/Gizmo/home/liquidlight/www/charcol/www/build/charcol/css",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"container",
+			"}\n",
+			"ask",
+			"askexport",
+			".relatedArticlesContainer ",
+			"div",
+			"relatedArtices",
+			"newsListGrid",
+			".grid",
+			"class=\"button\"",
+			"<h3>",
+			"single -->",
+			"relatedArticles",
+			"box.breakout",
+			"breakout",
+			"document",
+			"search",
+			"Unfortunately your search",
+			"Unfortunately your search did not return any results.",
+			"bread",
+			"banner",
+			"csc-firstHeader",
+			"streetview_embed",
+			"streetview",
+			"freepar",
+			"freeparking",
+			"data-src",
+			"url",
+			"parkinginformation",
+			"div",
+			"resize",
+			"onresize",
+			"streetview",
+			"1srszfnIIK2KwAAAQ7Loh12Q",
+			"rszfnIIK2KwAA",
+			"0!7i13312!8i",
+			"document.querySelector('.jsStreetViewContainer')",
+			"width: calc(100% + 2rem);",
+			"isDesktop",
+			"StreetView",
+			"streetView",
+			"log",
+			"iframe",
+			"csc-firstHeader",
+			"link",
+			"homepage",
+			"255,255,255",
+			"white",
+			"category",
+			"filters",
+			"users",
+			"transition",
+			"primaryNavigation",
+			"a.active",
+			"tablet",
+			"results",
+			"32",
+			"twitter",
+			"media",
+			"6",
+			"copyright",
+			"var(--color2)",
+			" layout(gutter)",
+			"150",
+			"200",
+			"N: summary",
+			": summary",
+			"- ",
+			"gutterSmall",
+			"results",
+			"resetList",
+			"search",
+			"radius",
+			"focus",
+			".csc-textpic-text",
+			".csc-textpic-image",
+			"chevronSecondary",
+			"Primary",
+			"headerNavigationWrapper",
+			"social",
+			".messages",
+			"Lrg",
+			"social",
+			"footer",
+			"footerNavigation",
+			"subNavFooter",
+			".footer",
+			"footer",
+			".footer",
+			"copyright",
+			"footer",
+			"linkedin",
+			"Lightest",
+			"Primary",
+			"Secondary",
+			"footerNavigation",
+			"footer",
+			"search",
+			"headerNavigation",
+			"navigationWrapper",
+			"primaryNavigation",
+			".5rem",
+			"primaryNavigation",
+			"container",
+			"banner",
+			"primary",
+			".primaryNavigation",
+			"navigation",
+			"/assets/",
+			"/fonts/",
+			"headerNavigation",
+			"header",
+			"navigationWrapper",
+			"navigation",
+			"headerNavigation",
+			"lib.navig",
+			"lib.header",
+			"question",
+			"#content",
+			"content",
+			"answer",
+			"i",
+			"is-ac",
+			"document.querySelector('[da",
+			"}\n",
+			"updateMap",
+			"querySelector('[",
+			"querySelector"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"r: theme(neutralLightest)",
+			"theme(neutralLightest)",
+			"single",
+			"-",
+			"."
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/tpl/News.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10002,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6039,
+								6054
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Dracula.tmTheme",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3920.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/js/core.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13259,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								13259,
+								13259
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Dracula.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 7443.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/css/partials/components/_news.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6417,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5583,
+								5583
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Dracula.tmTheme",
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5913.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/css/partials/_variables.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1994,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								419,
+								419
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Dracula.tmTheme",
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 143.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/css/partials/components/_button.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1335,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1028,
+								1028
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Dracula.tmTheme",
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 388.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/joao/Gizmo/home/joao/www/charcol/www/build/charcol/css/partials/components/_overides.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11273,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3849,
+								3849
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Dracula.tmTheme",
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 355.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 94.0
+	},
+	"pinned_build_system": "",
+	"project": "charcol.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"_over",
+				"build/charcol/css/partials/components/_overides.scss"
+			],
+			[
+				"_buttons",
+				"build/charcol/css/partials/components/_button.scss"
+			],
+			[
+				"news.html",
+				"build/charcol/tpl/News.html"
+			],
+			[
+				"core.js",
+				"build/charcol/js/core.js"
+			],
+			[
+				"setup.ts",
+				"build/charcol/ts/setup.ts"
+			],
+			[
+				"_overide",
+				"build/charcol/css/partials/components/_overides.scss"
+			],
+			[
+				"_page",
+				"build/charcol/css/partials/structure/_page.scss"
+			],
+			[
+				"_pages",
+				"build/charcol/css/partials/components/_pages.scss"
+			],
+			[
+				"_box",
+				"build/charcol/css/partials/components/_box.scss"
+			],
+			[
+				"_news",
+				"build/charcol/css/partials/components/_news.scss"
+			],
+			[
+				"_searc",
+				"build/charcol/css/partials/components/_search.scss"
+			],
+			[
+				"_variables",
+				"build/berwick-partners/css/partials/_variables.scss"
+			],
+			[
+				"_slider",
+				"build/berwick-partners/css/partials/components/_slider.scss"
+			],
+			[
+				"_featuredcard",
+				"build/berwick-partners/css/partials/components/_featuredCards.scss"
+			],
+			[
+				"_header",
+				"build/berwick-partners/css/partials/structure/_header.scss"
+			],
+			[
+				"_utils",
+				"build/berwick-partners/css/partials/_utils.scss"
+			],
+			[
+				"box.html",
+				"build/berwick-partners/tpl/Box.html"
+			],
+			[
+				"branches.html",
+				"html/typo3conf/ext/gym_branches/Model/Branches/Template/Branches.html"
+			],
+			[
+				"_typo",
+				"build/berwick-partners/css/partials/base/_typography.scss"
+			],
+			[
+				"_featured",
+				"build/berwick-partners/css/partials/components/_featuredCards.scss"
+			],
+			[
+				"_variables.s",
+				"build/berwick-partners/css/partials/_variables.scss"
+			],
+			[
+				"_box.scss",
+				"build/berwick-partners/css/partials/components/_box.scss"
+			],
+			[
+				"_varai",
+				"build/gym/css/partials/_variables.scss"
+			],
+			[
+				"_navigation",
+				"build/berwick-partners/css/partials/structure/_navigation.scss"
+			],
+			[
+				"_components",
+				"build/berwick-partners/css/partials/_components.scss"
+			],
+			[
+				"_button",
+				"build/berwick-partners/css/partials/components/_button.scss"
+			],
+			[
+				"_box.scs",
+				"build/berwick-partners/css/partials/components/_box.scss"
+			],
+			[
+				"_naviga",
+				"build/berwick-partners/css/partials/structure/_navigation.scss"
+			],
+			[
+				"core",
+				"build/berwick-partners/js/core.js"
+			],
+			[
+				"_filters",
+				"build/berwick-partners/css/partials/components/_filters.scss"
+			],
+			[
+				"_forms",
+				"build/berwick-partners/css/partials/base/_forms.scss"
+			],
+			[
+				"_typography",
+				"build/berwick-partners/css/partials/base/_typography.scss"
+			],
+			[
+				"_navigation.scss",
+				"build/berwick-partners/css/partials/structure/_navigation.scss"
+			],
+			[
+				"_variables.scss",
+				"build/berwick-partners/css/partials/_variables.scss"
+			],
+			[
+				"setup.",
+				"build/ica/ts/setup.ts"
+			],
+			[
+				"screen.rte",
+				"build/berwick-partners/css/screen.rte.scss"
+			],
+			[
+				"_news.scss",
+				"build/berwick-partners/css/partials/components/_news.scss"
+			],
+			[
+				"news.php",
+				"html/typo3/ext/ll_news/Model/News/Observer/News.php"
+			],
+			[
+				"_pagination",
+				"build/berwick-partners/css/partials/components/_pagination.scss"
+			],
+			[
+				"_search",
+				"build/berwick-partners/css/partials/components/_search.scss"
+			],
+			[
+				"pagination",
+				"build/berwick-partners/css/partials/components/_pagination.scss"
+			],
+			[
+				"_lists",
+				"build/berwick-partners/css/partials/base/_lists.scss"
+			],
+			[
+				"navigatoi",
+				"build/berwick-partners/css/partials/structure/_navigation.scss"
+			],
+			[
+				"typogra",
+				"build/berwick-partners/css/partials/base/_typography.scss"
+			],
+			[
+				"_docum",
+				"build/berwick-partners/css/partials/base/_document.scss"
+			],
+			[
+				"_butt",
+				"build/berwick-partners/css/partials/components/_button.scss"
+			],
+			[
+				"_typog",
+				"build/berwick-partners/css/partials/base/_typography.scss"
+			],
+			[
+				"_documen",
+				"build/berwick-partners/css/partials/base/_document.scss"
+			],
+			[
+				"_base",
+				"build/berwick-partners/css/partials/_base.scss"
+			],
+			[
+				"_page.scss",
+				"build/berwick-partners/css/partials/structure/_page.scss"
+			],
+			[
+				"_footer",
+				"build/berwick-partners/css/partials/structure/_footer.scss"
+			],
+			[
+				"_footter",
+				"html/t3lib/formprotection/class.t3lib_formprotection_abstract.php"
+			],
+			[
+				".og",
+				".gitignore"
+			],
+			[
+				"_variab",
+				"build/berwick-partners/css/partials/_variables.scss"
+			],
+			[
+				"header",
+				"build/berwick-partners/css/partials/structure/_header.scss"
+			],
+			[
+				"findplugin.php",
+				"html/typo3conf/ext/ll_tm/Plugin/Find/Plugin.php"
+			],
+			[
+				"html/typo3conf/ext/irfaq/pi1/class.tx_irfaq_pi1.php",
+				"html/typo3conf/ext/irfaq/pi1/class.tx_irfaq_pi1.php"
+			],
+			[
+				"pbsurveyclientemail.ht",
+				"html/typo3conf/ext/ll_tm/Template/PBSurveyClientEmail.html"
+			],
+			[
+				"map.js",
+				"build/avo/js/map.js"
+			],
+			[
+				"_stat",
+				"build/avo/css/partials/components/_stats-tabs.scss"
+			],
+			[
+				"_map.ss",
+				"build/avo/css/partials/components/_map.scss"
+			],
+			[
+				"index.ht",
+				"index.html"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"globalset",
+				"build/global/ts/setup.ts"
+			],
+			[
+				"ukpscreen.scss",
+				"build/uk-pi/css/screen.scss"
+			],
+			[
+				"ukscreen.css",
+				"html/assets/uk-pi/css/screen.css"
+			],
+			[
+				"bp.html",
+				"html/typo3conf/ext/bp/Template/bp.html"
+			],
+			[
+				"gulp",
+				"gulpfile.js"
+			],
+			[
+				"app.js",
+				"src/js/app.js"
+			],
+			[
+				"categories.html",
+				"html/typo3/ext/ll_catalog_taxonomy/Filter/Categories/Template/Categories.html"
+			],
+			[
+				"build/tm/ts/setup.ts",
+				"build/tm/ts/setup.ts"
+			],
+			[
+				"build/blp/ts/setup.ts",
+				"build/blp/ts/setup.ts"
+			],
+			[
+				"_form",
+				"build/big/css/partials/base/_forms.scss"
+			],
+			[
+				"_vari",
+				"build/big/css/partials/_variables.scss"
+			],
+			[
+				"eventform.",
+				"html/typo3conf/ext/big/Plugin/EventForm/Template/EventForm.html"
+			],
+			[
+				"_navig",
+				"build/avo/css/partials/structure/_navigation.scss"
+			],
+			[
+				"_stats",
+				"build/avo/css/partials/components/_stats-tabs.scss"
+			],
+			[
+				"_typogr",
+				"build/avo/css/partials/base/_typography.scss"
+			],
+			[
+				"_map",
+				"build/avo/css/partials/components/_map.scss"
+			],
+			[
+				"_varia",
+				"build/avo/css/partials/_variables.scss"
+			],
+			[
+				"_map.scss",
+				"build/avo/css/partials/components/_map.scss"
+			],
+			[
+				"_page.scs",
+				"build/avo/css/partials/structure/_page.scss"
+			],
+			[
+				"_news.",
+				"build/avo/css/partials/components/_news.scss"
+			],
+			[
+				"_document",
+				"build/avo/css/partials/base/_document.scss"
+			],
+			[
+				"/typo3/ext/ll_fe/default/build/gulp/gulpfile-v2.js",
+				"html/typo3/ext/ll_fe/Default/Build/gulp/gulpfile-v2.js"
+			],
+			[
+				"html/typo3conf/ext/ll_tm/hook/class.tx_lltm_pbsurvey_hook.php",
+				"html/typo3conf/ext/ll_tm/Hook/class.tx_lltm_pbsurvey_hook.php"
+			],
+			[
+				"pbsurvey_hook.",
+				"html/typo3conf/ext/ll_tm/Hook/class.tx_lltm_pbsurvey_hook.php"
+			],
+			[
+				"knowledge.html",
+				"html/typo3conf/ext/ll_tm_knowledgebase/Model/Knowledge/Template/Knowledge.html"
+			],
+			[
+				"eventform",
+				"html/typo3conf/ext/big/Plugin/EventForm/Template/EventForm.html"
+			],
+			[
+				"eventform.html",
+				"html/typo3conf/ext/big/Plugin/EventForm/Template/EventForm.html"
+			],
+			[
+				"_keyfa",
+				"build/avo/css/partials/utils/_keyframes.scss"
+			],
+			[
+				"_table-gra",
+				"build/avo/css/partials/components/_table-graph.scss"
+			],
+			[
+				"statistics",
+				"html/typo3conf/ext/avo/Plugin/Statistics/Template/Statistics.html"
+			],
+			[
+				"_map.scs",
+				"build/avo/css/partials/components/_map.scss"
+			],
+			[
+				"_nav",
+				"build/avo/css/partials/structure/_navigation.scss"
+			],
+			[
+				"statist",
+				"html/typo3conf/ext/avo/Plugin/Statistics/Template/Statistics.html"
+			],
+			[
+				"statis",
+				"html/typo3conf/ext/avo/Plugin/Statistics/Template/Statistics.html"
+			],
+			[
+				"people-",
+				"src/js/views/components/people-detail.js"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"setup",
+				"build/afmi/ts/setup.ts"
+			],
+			[
+				"test.js",
+				"assets/js/test.js"
+			],
+			[
+				"test",
+				"assets/js/test.js"
+			],
+			[
+				"_naviag",
+				"build/avo/css/partials/structure/_navigation.scss"
+			],
+			[
+				"core.",
+				"build/maples/js/core.js"
+			],
+			[
+				"plugin.php",
+				"html/typo3conf/ext/avo/Plugin/Statistics/Plugin.php"
+			],
+			[
+				"import.php",
+				"html/typo3conf/ext/avo/Task/Import.php"
+			],
+			[
+				"map",
+				"build/avo/js/map.js"
+			],
+			[
+				"_keyframes",
+				"build/avo/css/partials/utils/_keyframes.scss"
+			],
+			[
+				"print.scss",
+				"build/avo/css/print.scss"
+			],
+			[
+				"_keyrames",
+				"build/avo/css/partials/utils/_keyframes.scss"
+			],
+			[
+				"_select",
+				"build/avo/css/partials/components/_select.scss"
+			],
+			[
+				"_loader",
+				"build/avo/css/partials/components/_loader.scss"
+			],
+			[
+				"_inden",
+				"build/avo/css/partials/components/_indentingBox.scss"
+			],
+			[
+				"keyframes",
+				"build/avo/css/partials/utils/_keyframes.scss"
+			],
+			[
+				"_table",
+				"build/avo/css/partials/components/_table-graph.scss"
+			],
+			[
+				"statistics.html",
+				"html/typo3conf/ext/avo/Plugin/Statistics/Template/Statistics.html"
+			],
+			[
+				"_sele",
+				"build/avo/css/partials/components/_select.scss"
+			],
+			[
+				"_ma",
+				"build/avo/css/partials/components/_map.scss"
+			],
+			[
+				"statistics.",
+				"html/typo3conf/ext/avo/Plugin/Statistics/Template/Statistics.html"
+			],
+			[
+				"pbsurveyclientemail.html",
+				"html/typo3conf/ext/ll_tm/Template/PBSurveyClientEmail.html"
+			],
+			[
+				"navia",
+				"build/avo/css/partials/structure/_navigation.scss"
+			],
+			[
+				"header.scss",
+				"build/avo/css/partials/structure/_header.scss"
+			],
+			[
+				"_typogra",
+				"build/avo/css/partials/base/_typography.scss"
+			],
+			[
+				"news.",
+				"build/avo/tpl/News.html"
+			],
+			[
+				"sprite",
+				"build/avo/img/sprite.svg"
+			],
+			[
+				"_navigation.",
+				"build/avo/css/partials/structure/_navigation.scss"
+			],
+			[
+				"navigation",
+				"html/typo3/sysext/workspaces/Resources/Private/Partials/navigation.html"
+			],
+			[
+				"struture",
+				"build/avo/css/partials/_structure.scss"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "carcol",
+		"selected_items":
+		[
+			[
+				"carcol",
+				"~/Library/Application Support/Sublime Text 3/Packages/User/Projects/charcol.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 87.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 422.0
+	},
+	"selected_group": 1,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 271.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

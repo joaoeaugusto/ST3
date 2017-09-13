@@ -1,0 +1,29 @@
+{
+	"history":
+	[
+		{
+			"data":
+			{
+				"args":
+				{
+					"text": "webpack.js",
+					"threshold": 3
+				},
+				"command": "text_pastry_insert_text",
+				"text": "webpack.js"
+			},
+			"key": "22afadecb208f8af673f61960f51fbc9",
+			"label": "webpack.js"
+		}
+	],
+	"last_command":
+	{
+		"args":
+		{
+			"text": "webpack.js",
+			"threshold": 3
+		},
+		"command": "text_pastry_insert_text",
+		"text": "webpack.js"
+	}
+}
